@@ -1,0 +1,13 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -O2 -Wall
+LIBS = -lsfml-graphics -lsfml-window -lsfml-system
+TARGET = sch
+SOURCE = schedule.cpp
+
+$(TARGET): $(SOURCE)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCE) $(LIBS)
+
+clean:
+	rm -f $(TARGET)
+
+.PHONY: clean
